@@ -1,34 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const foodList = [
         {
-            name: "닭가슴살",
-            image: "https://example.com/chicken.jpg",  // 실제 이미지 URL로 대체하세요
-            calories: 165,
-            protein: 31,
-            fat: 3.6,
-            carbohydrates: 0,
+            name: "케일",
+            image: "https://example.com/kale.jpg",  // 실제 이미지 URL로 대체하세요
             rating: 5,
-            description: "닭가슴살은 고단백, 저지방 식품으로 다이어트에 적합합니다."
+            description: "케일은 비타민과 미네랄이 풍부한 슈퍼푸드입니다."
         },
         {
-            name: "연어",
-            image: "https://example.com/salmon.jpg",  // 실제 이미지 URL로 대체하세요
-            calories: 208,
-            protein: 20,
-            fat: 13,
-            carbohydrates: 0,
+            name: "당근",
+            image: "https://example.com/carrot.jpg",  // 실제 이미지 URL로 대체하세요
             rating: 4.5,
-            description: "연어는 오메가-3 지방산이 풍부해 심장 건강에 좋습니다."
-        },
-        {
-            name: "브로콜리",
-            image: "https://example.com/broccoli.jpg",  // 실제 이미지 URL로 대체하세요
-            calories: 55,
-            protein: 3.7,
-            fat: 0.6,
-            carbohydrates: 11,
-            rating: 4,
-            description: "브로콜리는 비타민 C와 식이섬유가 풍부한 슈퍼푸드입니다."
+            description: "당근은 눈 건강에 좋은 베타카로틴이 풍부합니다."
         },
         // 추가 음식 데이터
     ];
@@ -48,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         foodItem.innerHTML = `
             <img src="${food.image}" alt="${food.name}">
             <div class="food-info">
+                <h3>${food.name}</h3>
                 <div class="star-rating">${stars}</div>
             </div>
         `;
@@ -63,11 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modalBody.innerHTML = `
             <h2>${food.name}</h2>
             <img src="${food.image}" alt="${food.name}" style="width: 100%; height: auto; margin-top: 10px;">
-            <p style="margin-top: 10px;"><strong>칼로리:</strong> ${food.calories} kcal</p>
-            <p><strong>단백질:</strong> ${food.protein} g</p>
-            <p><strong>지방:</strong> ${food.fat} g</p>
-            <p><strong>탄수화물:</strong> ${food.carbohydrates} g</p>
-            <p style="margin-top: 15px;">${food.description}</p>
+            <p style="margin-top: 10px;"><strong>설명:</strong> ${food.description}</p>
         `;
         modal.style.display = "block";
     }
