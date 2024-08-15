@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재훈이가 알려주는 식단이야</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>재훈이가 알려주는 식단이야</h1>
+    </header>
+
+    <main>
+        <section id="search">
+            <h2>음식 칼로리 및 영양 성분 검색</h2>
+            <input type="text" id="food-input" placeholder="음식 이름을 입력하세요...">
+            <button id="search-button">검색</button>
+        </section>
+
+        <section id="recommendations">
+            <h2>재훈이가 추천하는 음식 Best 10</h2>
+            <div id="food-list"></div>
+        </section>
+    </main>
+
+    <!-- 모달 창 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
