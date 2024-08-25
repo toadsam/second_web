@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>재훈이가 알려주는 식단이야</title>
+    <title>재훈's 비밀 식단</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div id="logo">
-            <h1>재훈이가 알려주는 식단이야</h1>
+            <h1>재훈's 비밀 식단</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="#">Sonyninstr</a></li>
-                <li><a href="#">Fitnessad</a></li>
-                <li><a href="#">Roaslotnr</a></li>
-                <li><a href="#">Afchron</a></li>
-                <li><a href="#">Witneshm</a></li>
-                <li><a href="#">IGkupion</a></li>
+                <li><a href="#">위험한 친구들(갤럭시 임팩트 급)</a></li>
+                <li><a href="#">제로 칼로리</a></li>
+                
+                <li><a href="#">영양성분표</a></li>
+                <li><a href="#" id="wishlist-link">찜 목록</a></li>
             </ul>
         </nav>
     </header>
@@ -26,7 +25,7 @@
     <main>
         <section id="hero">
             <div id="chef">
-                <img src="path_to_your_chef_image.png" alt="Chef">
+                <img src="음식사진들/셰프 캐릭터.webp" alt="Chef">
             </div>
             <div id="search">
                 <input type="text" id="food-input" placeholder="음식 이름을 입력하세요...">
@@ -35,12 +34,29 @@
         </section>
 
         <section id="recommendations">
-            <h2>Best 10 Food Recommendations</h2>
+            <h2>정재훈 추천 Best 10</h2>
+            <p class="note">주의! 좋은 성분을 기준으로 순위가 매겨지지만, 맛이 뛰어난 경우에는 순위 기준이 달라질 수 있습니다.</p>
             <div id="food-list">
                 <!-- 각 음식 항목은 여기 추가됩니다 -->
             </div>
         </section>
-    </main>
+        </main>
+
+    <!-- 모달 창 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- 찜 목록 모달 창 -->
+    <div id="wishlist-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-wishlist">&times;</span>
+            <div id="wishlist-body"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
